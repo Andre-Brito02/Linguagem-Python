@@ -42,9 +42,10 @@ def seno():
     print(f"Tempo de execução: {tempoTotal:.5f} segundos") 
     # Exibir o uso de memória em MB
     print(f"Uso de memória: {memoriaUsada / (1024 * 1024):.5f} MB") 
+    # Exibir o uso da CPU antes e depois do laço 
     print(f"Uso de CPU: {usoCPUAntes}%, {usoCPUDepois}%")
     print("-----------------------------------") # Melhoria na exibição
-    print()
+    print() # Pular uma linha
 
 def cosseno():
     print("------------Função Cosseno------------") # Melhoria na exibição
@@ -85,10 +86,11 @@ def cosseno():
      # Exibir o tempo de execução
     print(f"Tempo de execução: {tempoTotal:.5f} segundos") 
     # Exibir o uso de memória em MB
-    print(f"Uso de memória: {memoriaUsada / (1024 * 1024):.5f} MB") 
+    print(f"Uso de memória: {memoriaUsada / (1024 * 1024):.5f} MB")
+    # Exibir o uso da CPU antes e depois do laço 
     print(f"Uso de CPU: {usoCPUAntes}%, {usoCPUDepois}%")
     print("--------------------------------------") # Melhoria na exibição
-    print()
+    print() # Pular uma linha
 
 def tangente():
     print("------------Função Tangente------------") # Melhoria na exibição
@@ -104,7 +106,7 @@ def tangente():
     # RSS é a quantidade de memória fisicamente residente (não trocada para disco) ocupada pelo processo.
 
     # Variável criada para armazenar o valor do uso do processador antes do laço
-    usoCPUAntes = psutil.cpu_percent(interval=1)
+    usoCPUAntes = psutil.cpu_percent(interval=1) # método que retorna a percentagem de utilização da CPU no período de tempo especificado pelo parâmetro interval
 
     # Laço for para calcular os valores do seno
     for angulo in range(0, 20000): # Laço for para pegar os valores de 0 a 10001 
@@ -130,9 +132,10 @@ def tangente():
     print(f"Tempo de execução: {tempoTotal:.5f} segundos") 
     # Exibir o uso de memória em MB
     print(f"Uso de memória: {memoriaUsada / (1024 * 1024):.5f} MB") 
+    # Exibir o uso da CPU antes e depois do laço 
     print(f"Uso de CPU: {usoCPUAntes}%, {usoCPUDepois}%")
     print("---------------------------------------") # Melhoria na exibição
-    print()
+    print() # Pular uma linha
 
 # Chamar a função seno
 seno()
