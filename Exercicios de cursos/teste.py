@@ -1,6 +1,7 @@
+import calendar
 import random as rd
 
-num = rd.randrange(1,21)
+yy = 2024
+mm = rd.randrange(1,13)
 
-print(num)
-
+print(calendar.month(yy,mm))
