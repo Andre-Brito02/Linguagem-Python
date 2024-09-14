@@ -3,12 +3,12 @@ escolhasUsuario = []
 contador = True
 
 if escolha == "front-end":
-    escolhasUsuario.append(escolha.capitalize())
+    escolhasUsuario.append(escolha.title())
     print("\nVocê tem interesse em aprender Front-End!")
     escolha = input("Gostaria de aprender React ou Vue? ")
     escolhasUsuario.append(escolha.capitalize())
 elif escolha == "back-end":
-    escolhasUsuario.append(escolha.capitalize())
+    escolhasUsuario.append(escolha.title())
     print("\nVocê tem interesse em aprender Back-End!")
     escolha = input("Gostaria de aprender C# ou Java? ")
     escolhasUsuario.append(escolha.capitalize())
@@ -22,7 +22,7 @@ elif escolha == "fullstack":
     print(f"Você escolheu migrar para {escolhasUsuario[-1]}")
 
 while(contador):
-    escolha = input("Quais tecnologias gostaria de conhecer ou especializar? ")
+    escolha = input("\nQuais tecnologias gostaria de conhecer ou especializar? ")
     escolhasUsuario.append(escolha.capitalize())
     continuar = input("Tem mais alguma tecnologia que gostaria de aprender? ")
     print()
