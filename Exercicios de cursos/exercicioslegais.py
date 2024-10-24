@@ -121,9 +121,9 @@ for i in range(1,21):
     else:
         list_impar.append(numero)
         
-print("Vetor completo = {}".format(list))
-print("Vetor par = {}".format(list_par))
-print("Vetor impar = {}".format(list_impar))
+print(f"Vetor completo = {list}")
+print(f"Vetor par = {list_par}")
+print(f"Vetor impar = {list_impar}")
 
 
 import calendar
