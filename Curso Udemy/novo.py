@@ -58,6 +58,7 @@
 # print(f"Resultado do fatorial de {num_inicial} é {fatorial}")
 
 vogais = ['a', 'e', 'i', 'o', 'u']
+consoantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 vogais_utilizadas = []
 consoantes_utilizadas = []
 contador = 0
@@ -66,20 +67,11 @@ qtd_consoantes = 0
 
 frase = input("Digite uma frase: ")
 
-while True:
-    if contador == len(frase):
-        break
-    
-    for i in range(len(frase)):
-        if frase[i] in vogais:
-            vogais_utilizadas.append(frase[i])
-            contador += 1
-        else:
-            consoantes_utilizadas.append(frase[i])
-            contador += 1
-
-if ' ' in consoantes_utilizadas:
-    consoantes_utilizadas.remove(' ')
+for char in frase:
+    if char in vogais:
+        vogais_utilizadas.append(char)
+    elif char in consoantes:
+        consoantes_utilizadas.append(char)
 
 qtd_vogais = len(vogais_utilizadas)
 qtd_consoantes = len(consoantes_utilizadas)
@@ -89,26 +81,3 @@ print(f'Vogais utilizadas: {vogais_utilizadas}')
 print(f'Consoantes utilizadas: {consoantes_utilizadas}')
 print(f'Quantidade de vogais utilizadas: {qtd_vogais}')
 print(f'Quantidade de Consoantes utilizadas: {qtd_consoantes}')
-
-# vogais = ['a', 'e', 'i', 'o', 'u']
-# consoantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
-# vogais_utilizadas = {}
-# consoantes_utilizadas = {}
-
-# frase = input("Digite uma frase: ").lower()
-
-# for char in frase:
-#     if char in vogais:
-#         if char in vogais_utilizadas:
-#             vogais_utilizadas[char] += 1
-#         else:
-#             vogais_utilizadas[char] = 1
-#     elif char in consoantes:
-#         if char in consoantes_utilizadas:
-#             consoantes_utilizadas[char] += 1
-#         else:
-#             consoantes_utilizadas[char] = 1
-
-# print(f"\nFrase: {frase}")
-# print(f'Vogais utilizadas: {vogais_utilizadas}')
-# print(f'Consoantes utilizadas: {consoantes_utilizadas}')

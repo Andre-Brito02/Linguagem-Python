@@ -1,6 +1,6 @@
 nums = [1, 2, 3, 4, 5, 6]
 
-for i in range(0, len(nums)):
+for i in range(len(nums)):
     x = 0
     while(x <= i):
         print(nums[x], end=" ")
