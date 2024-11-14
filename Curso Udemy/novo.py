@@ -44,40 +44,60 @@
 # elif '/' in calculadora:
 #     print(f'Resultado da divisão = {num1 / num2:.2f}')
 
+# def fatorial(num):
+#     if num == 2:
+#         return 2
+#     else:
+#         return num * fatorial(num-1)
+
 # num = int(input("Digite um número: "))
-# num_inicial = num
-# fatorial = 1
+#if num == 0 or num == 1:
+#   print(f'O fatorial de {num} é: 1')
+#else:
+#   print(f"O valor do fatorial de {num} é: {fatorial(num)}")
 
-# if num < 0:
-#     print("Números negativos não são permitidos!")
-# else:
-#     while(num > 0):
-#         fatorial *= num
-#         num -= 1
+# vogais = ['a', 'e', 'i', 'o', 'u']
+# consoantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+# vogais_utilizadas = []
+# consoantes_utilizadas = []
+# contador = 0
+# qtd_vogais = 0
+# qtd_consoantes = 0
 
-# print(f"Resultado do fatorial de {num_inicial} é {fatorial}")
+# frase = input("Digite uma frase: ")
 
-vogais = ['a', 'e', 'i', 'o', 'u']
-consoantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
-vogais_utilizadas = []
-consoantes_utilizadas = []
-contador = 0
-qtd_vogais = 0
-qtd_consoantes = 0
+# for char in frase:
+#     if char in vogais:
+#         vogais_utilizadas.append(char)
+#     elif char in consoantes:
+#         consoantes_utilizadas.append(char)
+
+# qtd_vogais = len(vogais_utilizadas)
+# qtd_consoantes = len(consoantes_utilizadas)
+
+# print(f"\nFrase: {frase}")
+# print(f'Vogais utilizadas: {vogais_utilizadas}')
+# print(f'Consoantes utilizadas: {consoantes_utilizadas}')
+# print(f'Quantidade de vogais utilizadas: {qtd_vogais}')
+# print(f'Quantidade de Consoantes utilizadas: {qtd_consoantes}')
 
 frase = input("Digite uma frase: ")
+letras = {}
+contador = 0
 
-for char in frase:
-    if char in vogais:
-        vogais_utilizadas.append(char)
-    elif char in consoantes:
-        consoantes_utilizadas.append(char)
+while True:
+    if frase[contador] not in letras:
+        letras[frase[contador]] = 1
+    else:
+        letras[frase[contador]] += 1
+    contador += 1
 
-qtd_vogais = len(vogais_utilizadas)
-qtd_consoantes = len(consoantes_utilizadas)
+    if contador == len(frase):
+        break
 
-print(f"\nFrase: {frase}")
-print(f'Vogais utilizadas: {vogais_utilizadas}')
-print(f'Consoantes utilizadas: {consoantes_utilizadas}')
-print(f'Quantidade de vogais utilizadas: {qtd_vogais}')
-print(f'Quantidade de Consoantes utilizadas: {qtd_consoantes}')
+if ' ' in letras:
+    letras.pop(' ')
+
+for chave, valor in letras.items():
+    if valor > 1:
+        print(f'{chave}: {valor}')
