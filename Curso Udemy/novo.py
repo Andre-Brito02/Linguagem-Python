@@ -83,21 +83,16 @@
 
 frase = input("Digite uma frase: ")
 letras = {}
-contador = 0
 
-while True:
-    if frase[contador] not in letras:
-        letras[frase[contador]] = 1
-    else:
-        letras[frase[contador]] += 1
-    contador += 1
+# Usando um loop `for` simplifica a contagem
+for char in frase:
+    if char != ' ':  # Ignora espaços diretamente
+        if char not in letras:
+            letras[char] = 1
+        else:
+            letras[char] += 1
 
-    if contador == len(frase):
-        break
-
-if ' ' in letras:
-    letras.pop(' ')
-
+# Imprime apenas as letras com valor maior que 1
 for chave, valor in letras.items():
     if valor > 1:
         print(f'{chave}: {valor}')
