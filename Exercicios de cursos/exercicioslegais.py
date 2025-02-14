@@ -161,3 +161,23 @@
 
 # elif(jokenpo[suaEscolha] == 'tesoura' and jokenpo[escolhaAdversaria] == 'pedra'):
 #     print("Você perdeu")
+
+# def obter_diferenca(a, b, c, d):
+#     diferenca = a * b - c * d
+#     print(f"DIFERENCA = {diferenca}")
+
+# def pegar_numeros():
+#     try:
+#         a = int(input("Digite o 1° número: "))
+#         b = int(input("Digite o 2° número: "))
+#         c = int(input("Digite o 3° número: "))
+#         d = int(input("Digite o 4° número: "))
+        
+#         obter_diferenca(a, b, c, d)
+#     except ValueError:
+#         print("Digite um valor numérico\n")
+#         pegar_numeros()
+    
+# pegar_numeros()
+
+
